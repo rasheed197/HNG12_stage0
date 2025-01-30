@@ -1,6 +1,7 @@
 from fastapi import FastAPI, status
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 from datetime import datetime
 
 app = FastAPI()
@@ -9,6 +10,7 @@ origins = [
     "http://localhost",
     "http://localhost:8080",
     "http://localhost:80",
+    "http://localhost:8000",
 ]
 
 app.add_middleware(
@@ -19,10 +21,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+class ReturnData(BaseModel):
+    email: str
+    current_datetime: str
+    github_url: str
+
 @app.get("/")
-async def root():
+async def root() -> ReturnData:
     now = datetime.now()
     iso_string_without_microseconds = now.isoformat().split('.')[0]
+    print(type(iso_string_without_microseconds))
     return JSONResponse(
         content={
             "email": "tiamiyurasheed.tr@gmail.com",
