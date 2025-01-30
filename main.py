@@ -11,6 +11,7 @@ origins = [
     "http://localhost:8080",
     "http://localhost:80",
     "http://localhost:8000",
+    "https://basic-info-api-v9qo.onrender.com/",
 ]
 
 app.add_middleware(
