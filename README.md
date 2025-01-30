@@ -51,8 +51,8 @@ fastapi dev main.py
 8.  Visit the url http://127.0.0.1:8000
 ### API Documentation
 1. Endpoint URL - http://127.0.0.1:8000/
-2. Request Format - None
-3. Response Format - JSON
+2. Request Body - None
+3. Response Body - JSON
 ```
 {
   "email": "string",
