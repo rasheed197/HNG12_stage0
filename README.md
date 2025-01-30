@@ -24,7 +24,7 @@ py -m venv venv
 ```
 **Unix/MacOS**
 ```
-py -m venv venv
+python -m venv venv
 ```
 4. Activate the virtual environment
 
@@ -36,13 +36,13 @@ venv\Scripts\activate.bat
 ```
 source venv/bin/activate
 ```
-5. Install fastapi
-```
-pip install "fastapi[standard]"
-```
-6. Clone the github repo
+5. Clone the github repo
 ```
 git clone <repo-url>
+```
+6. Install the requirements.txt file
+```
+pip install -r requirements.txt
 ```
 7. Run server
 ```
