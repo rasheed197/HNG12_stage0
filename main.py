@@ -31,7 +31,7 @@ class ReturnData(BaseModel):
 @app.get("/")
 async def root() -> ReturnData:
     now = datetime.now()
-    iso_string_without_microseconds = now.isoformat().split('.')[0]
+    iso_string_without_microseconds = now.isoformat().split('.')[0] + "Z"
     print(type(iso_string_without_microseconds))
     return JSONResponse(
         content={
