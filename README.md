@@ -6,7 +6,7 @@
  3.  The GitHub URL of the project's codebase.
  
 The programming language used for this project is python(fastapi).
-The project was deployed to [render.com](https://render.com/)
+The project was deployed to [render.com](https://basicinfo-api.onrender.com)
 ### Setup Instructions
 1. Create a new directory in your PC
 ```
